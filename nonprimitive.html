@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Primitive and Non Primitive types</title>
+        
+    </head>
+    <body>
+        <p id="person"></p>
+        <script>
+            let person = {
+                name: "Rama Krishna",
+                age: 35,
+                mobile: 9568742310
+            }
+            let result = ''
+            result += 'Name: '+person.name
+            result += "<br>Age: "+person.age
+            result += "<br>Mobile: "+ person['mobile']
+            document.getElementById('person').innerHTML = result
+        </script>
+    </body>
+</html>
