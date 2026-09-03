@@ -1,0 +1,82 @@
+<!-- Web Storage Example  
+    Local Storage and Session Storage are part of the Web Storage API, 
+    which allows web applications to store data in the browser. 
+    Local Storage provides a way to store data with no expiration date, 
+    while Session Storage stores data for the duration of the page session. 
+    Both types of storage are accessible via JavaScript and can be used to 
+    persist user preferences, session information, or any other data that 
+    needs to be retained across page reloads or sessions.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web Storage Example</title>
+        <script>
+            function saveData() {
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                localStorage.setItem("username", username);
+                localStorage.setItem("password", password);
+                document.getElementById("username").value = "";
+                document.getElementById("password").value = "";
+                document.getElementById("local-storage").innerText = "Data saved in Local Storage.";
+            }
+
+            function loadData() {
+                var username = localStorage.getItem("username");
+                var password = localStorage.getItem("password");
+                document.getElementById("username").value = username;
+                document.getElementById("password").value = password;
+            }
+
+            function clearData() {
+                localStorage.clear();
+                document.getElementById("username").value = "";
+                document.getElementById("password").value = "";
+            }
+
+            // function saveSessionData() {
+            //     var username = document.getElementById("session-username").value;
+            //     var password = document.getElementById("session-password").value;
+            //     sessionStorage.setItem("session-username", username);
+            //     sessionStorage.setItem("session-password", password);
+            // }
+
+            // function loadSessionData() {
+            //     var username = sessionStorage.getItem("session-username");
+            //     var password = sessionStorage.getItem("session-password");
+            //     document.getElementById("session-username").value = username;
+            //     document.getElementById("session-password").value = password;
+            // }
+
+            // function clearSessionData() {
+            //     sessionStorage.clear();
+            //     document.getElementById("session-username").value = "";
+            //     document.getElementById("session-password").value = "";
+            // }
+        </script>
+    </head>
+    <body>
+        <h1>Web Storage Example</h1>
+        <table border="1" align="center" width="50%">
+            <tr>
+                <th>UserName</th>
+                <td><input type="text" id="username"></td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td><input type="password" id="password"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button onclick="saveData()">Save Data</button>
+                    <button onclick="loadData()">Load Data</button>
+                    <button onclick="clearData()">Clear Data</button>
+                </td>
+        </table>
+        <p>Local Storage: <span id="local-storage"></span></p>
+        
+    </body>
+</html>

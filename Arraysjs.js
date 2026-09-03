@@ -113,6 +113,13 @@ let arr14 = arr13.filter(x => x % 2 === 0)
 console.log("Array-13: ", arr13)
 console.log("Array-14 after filtering even numbers from Array-13: ", arr14)
 
+//reduce() method is used to apply a function to each element of the array and 
+// reduce it to a single value
+
+let arr15 = [1, 2, 3, 4, 5]
+let sum = arr15.reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+console.log("Array-15: ", arr15)
+console.log("Sum of all elements in Array-15: ", sum)
 
 // promise, asynchronous programming, and async/await are advanced topics in JavaScript that allow for handling asynchronous operations more effectively.
 // fetch() is a modern way to make HTTP requests in JavaScript, returning a Promise that resolves to the Response object representing the response to the request. It is widely used for making API calls and handling data asynchronously.
