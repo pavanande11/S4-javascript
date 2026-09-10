@@ -1,0 +1,19 @@
+{
+    "students": [
+        {
+            "id": 2500030185,
+            "name": "Ramaiaha",
+            "gender": "male"
+        },
+        {
+            "id": 2500030186,
+            "name": "Rukmini",
+            "gender": "female"
+        },
+        {
+            "id": 2500030187,
+            "name": "Ramesh",
+            "gender": "male"
+        }
+    ]
+}
